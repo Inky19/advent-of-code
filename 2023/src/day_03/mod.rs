@@ -125,10 +125,8 @@ fn get_gear_ratio(lines:&[&str], row:u32, col:u32) -> GearRatio{
             power = power * 10;
             start_col -= 1;
         }
-        print!("{}  ", number);
         ratio.ratio[i] = number;
     }
-    println!("");
 
     return ratio;
 }
