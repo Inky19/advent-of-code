@@ -1,6 +1,7 @@
 use std::io;
 
 mod day_01;
+mod day_02;
 
 fn main() {
     loop {
@@ -15,14 +16,14 @@ fn main() {
             Err(_) => {
                 println!("Invalid input!");
                 continue;
-            },
+            }
         };
 
         match day {
             1 => day_01::run(),
+            2 => day_02::run(),
             5_u8..=24_u8 => println!("Not implemented yet"),
             _ => println!("Number must be between 1 and 24!"),
         }
     }
-    
 }
