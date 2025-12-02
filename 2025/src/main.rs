@@ -1,6 +1,7 @@
 use std::io;
 
 mod day_01;
+mod day_02;
 
 fn main() {
     loop {
@@ -20,7 +21,8 @@ fn main() {
 
         match day {
             1 => day_01::run(),
-            2_u8..=12_u8 => println!("Not implemented yet"),
+            2 => day_02::run(),
+            3_u8..=12_u8 => println!("Not implemented yet"),
             _ => println!("Number must be between 1 and 12!"),
         }
     }
