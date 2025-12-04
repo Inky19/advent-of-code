@@ -3,6 +3,7 @@ use std::io;
 mod day_01;
 mod day_02;
 mod day_03;
+mod day_04;
 
 fn main() {
     loop {
@@ -24,7 +25,8 @@ fn main() {
             1 => day_01::run(),
             2 => day_02::run(),
             3 => day_03::run(),
-            4_u8..=12_u8 => println!("Not implemented yet"),
+            4 => day_04::run(),
+            5_u8..=12_u8 => println!("Not implemented yet"),
             _ => println!("Number must be between 1 and 12!"),
         }
     }
