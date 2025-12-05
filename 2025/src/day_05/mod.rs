@@ -28,13 +28,13 @@ fn pb1and2<'a>(mut lines: impl Iterator<Item = &'a str>) {
     }
 
     ranges.sort();
-    let mut ranges_it = ranges.iter_mut();
+    let mut ranges_it = ranges.iter();
     let first_range = ranges_it.next().unwrap();
     let mut ranges_unique: Vec<OrdRangeInclusive<i64>> = vec![OrdRangeInclusive::new(
         *first_range.0.start(),
         *first_range.0.end(),
     )];
-    for range in &mut ranges_it {
+    for range in ranges_it {
         let prev_range = ranges_unique.last().unwrap();
         if prev_range.0.end() >= range.0.start() {
             if prev_range.0.end() >= range.0.end() {
