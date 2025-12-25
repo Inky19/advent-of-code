@@ -7,6 +7,7 @@ mod day_04;
 mod day_05;
 mod day_06;
 mod day_07;
+mod day_08;
 
 fn main() {
     loop {
@@ -32,7 +33,8 @@ fn main() {
             5 => day_05::run(),
             6 => day_06::run(),
             7 => day_07::run(),
-            8_u8..=12_u8 => println!("Not implemented yet"),
+            8 => day_08::run(),
+            9_u8..=12_u8 => println!("Not implemented yet"),
             _ => println!("Number must be between 1 and 12!"),
         }
     }
